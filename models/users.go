@@ -56,7 +56,7 @@ func (user *User) ValidateLoginCredentials() error {
 	passwordIsValid := utils.CheckPasswordHash(retrievedPassword, user.Password)
 
 	if !passwordIsValid {
-		return errors.New("Invalid password")
+		return errors.New("invalid password")
 	}
 
 	return nil
